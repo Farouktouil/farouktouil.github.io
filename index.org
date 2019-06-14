@@ -152,7 +152,7 @@ Marathon = 42.195 kilometres.
 
 *** TODO Go to concert
 
-#+INCLUDE: "gcal.org"
+#+INCLUDE: "~/Dropbox/orgfiles/gcal.org"
 =======
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://orgmode.org/worg/style/worg.css"/>
 #+HTML_HEAD: <style type="text/css">body{ max-width:80%; }</style>

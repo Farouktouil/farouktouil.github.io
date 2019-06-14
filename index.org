@@ -1,0 +1,25 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://orgmode.org/worg/style/worg.css"/>
+#+HTML_HEAD: <style type="text/css">body{ max-width:80%; }</style>
+
+* Some code
+#+BEGIN_SRC cpp :eval never
+template <typename ELEMENT_TYPE, typename DERIVED>
+class Memory_Interface : public StaticInterface_Base<DERIVED>
+{
+public:
+using SelfType = Memory_Interface;
+using StaticInterface_Base<DERIVED>::impl;
+
+// ...
+};
+#+END_SRC
+
+
+* To Do
+** TODO Appeler Mounir mesouare 
+ [2019-06-18 mar.]
+
+
+
+(add-to-list 'custom-theme-load-path "/path/to/emacs-leuven-theme")
+(load-theme 'leuven t)                  ; For Emacs 24+.

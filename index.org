@@ -19,80 +19,21 @@
   :END:
 
 Only work tasks in this list.
-
-** Marketing
-   :PROPERTIES:
-   :CATEGORY: Marketing
-   :END:
-
-Project "Corporate Marketing".
-
-*** Background and research
-
-**** TODO Who are the competitors?
-
-**** TODO What are our product's advantages?
-
-**** TODO Target market
-
-**** TODO Elevator pitch
-
-*** PR firm
-
-**** TODO Call Laura about PR firm                                       :phone:
-
-# *************** TODO Test with an inline task
-# *************** END
-
-**** TODO Interview PR firm candidates
-     DEADLINE: <2014-03-12 Wed>
-     :LOGBOOK:
-     CLOCK: [2013-02-05 Tue 09:00]--[2013-02-05 Tue 10:11] =>  1:11
-     - State "TODO"        ->  "STRT"       [2013-02-05 Tue 17:48]
-     - State "TODO"        ->  "STRT"       [2013-08-19 Mon 15:16]
-     :END:
-
-# *************** TODO Another test with an inline task
-
-*** Advertising campaign
-
-**** TODO Call Joe
-     DEADLINE: <2014-03-06 Thu>
-     :PROPERTIES:
-     :Effort:   0:10
-     :END:
-
-*** Plan conference
-
-Calendar events/invitations.
-
-**** TODO Recruit volunteers
-     DEADLINE: <2014-03-13 Thu>
-
-**** TODO Make sure responses are coming back
-
-** Operations
-
-*** TODO Update database to latest version
-    SCHEDULED: <2014-03-13 Thu>
-
-*** TODO Update Website
-
-Update blog.
-
-** Travel
-
-*** Boston
-
-**** TODO Find a flight
-
-**** TODO Book hotel room
-
-**** TODO Schedule meetings
-
-**** TODO Submit expense report
-
------
+*** php delete recursively 
+#+begin_php
+$dir = 'samples' . DIRECTORY_SEPARATOR . 'sampledirtree';
+$it = new RecursiveDirectoryIterator($dir, RecursiveDirectoryIterator::SKIP_DOTS);
+$files = new RecursiveIteratorIterator($it,
+             RecursiveIteratorIterator::CHILD_FIRST);
+foreach($files as $file) {
+    if ($file->isDir()){
+        rmdir($file->getRealPath());
+    } else {
+        unlink($file->getRealPath());
+    }
+}
+rmdir($dir);
+#+begin_php
 
 * Personal                                                                :home:
   :PROPERTIES:

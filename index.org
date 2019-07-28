@@ -108,8 +108,12 @@ Update blog.
 
 ** Health
 
-*** TODO Make dentist appointment
+*** TODO Make dentist appointment                                  :ATTACH:
     SCHEDULED: <2014-03-12 Wed>
+    :PROPERTIES:
+    :Attachments: English-CV-Farouk-Touil.pdf
+    :ID:       a520c5f1-faa2-4ea9-9a72-68c1fff22ebf
+    :END:
 
 *** TODO Go to the gym
     SCHEDULED: <2014-03-11 Tue>

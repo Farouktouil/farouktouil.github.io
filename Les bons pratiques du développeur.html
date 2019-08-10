@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
 <head>
-<!-- 2019-07-31 mer. 21:18 -->
+<!-- 2019-08-06 mar. 21:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Les bons pratiques du développeurs</title>
@@ -253,12 +253,12 @@ for the JavaScript code in this tag.
 <h2>Table des matières</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org261c50e">1. Création du répertoire de  mvc</a></li>
-<li><a href="#org2342de9">2. Création de deux  fichiers .htaccess</a></li>
-<li><a href="#orga4ead09">3. Création de la class config dans le répertoire lib</a></li>
-<li><a href="#orgb2f9c0a">4. Création du router   dans le répertoire lib</a></li>
-<li><a href="#org2e2fa08">5. Création de la class init dans le répertoire lib</a></li>
-<li><a href="#org88ce063">6. Ajouter un code de test dans config.php</a></li>
+<li><a href="#org37ff2fa">1. Création du répertoire de  mvc</a></li>
+<li><a href="#orgefa7a33">2. Création de deux  fichiers .htaccess</a></li>
+<li><a href="#org4dc5a01">3. Création de la class config dans le répertoire lib</a></li>
+<li><a href="#orgfcaada2">4. Création du router   dans le répertoire lib</a></li>
+<li><a href="#org53d9a1c">5. Création de la class init dans le répertoire lib</a></li>
+<li><a href="#org5471b23">6. Ajouter un code de test dans config.php</a></li>
 </ul>
 </div>
 </div>
@@ -267,8 +267,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-org261c50e" class="outline-2">
-<h2 id="org261c50e"><span class="section-number-2">1</span> Création du répertoire de  mvc</h2>
+<div id="outline-container-org37ff2fa" class="outline-2">
+<h2 id="org37ff2fa"><span class="section-number-2">1</span> Création du répertoire de  mvc</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>config</li>
@@ -281,14 +281,12 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org2342de9" class="outline-2">
-<h2 id="org2342de9"><span class="section-number-2">2</span> Création de deux  fichiers .htaccess</h2>
+<div id="outline-container-orgefa7a33" class="outline-2">
+<h2 id="orgefa7a33"><span class="section-number-2">2</span> Création de deux  fichiers .htaccess</h2>
 <div class="outline-text-2" id="text-2">
-<p>
- maintenant je crée deux fichiers htaccess un à la racine et l'autre
-dans le répertoire webroot   
-</p>
-<pre class="example">
+<div class="org-src-container">
+<pre class="src src-php">   #maintenant je crée deux fichiers htaccess un à la racine et l'autre
+  # dans le répertoire webroot   
 &lt;IfModule mod_rewrite.c&gt;
 # posé ce ficher a la racine du projet
     RewriteEngine on
@@ -296,9 +294,10 @@ dans le répertoire webroot
     RewriteRule (.*) webroot/$1 [L]
 &lt;/IfModule&gt;
 </pre>
+</div>
 
-<pre class="example">
-&lt;IfModule mod_rewrite.c&gt;
+<div class="org-src-container">
+<pre class="src src-php">&lt;IfModule mod_rewrite.c&gt;
 # posé ce fichier dans le répertoire webroot
     RewriteEngine on
     RewriteCond %{REQUEST_FILENAME} !-f
@@ -306,9 +305,10 @@ dans le répertoire webroot
     RewriteRule ^(.*)$ index.php [PT,L]
 &lt;/IfModule&gt;
 </pre>
+</div>
 
-<pre class="example">
-// Pour tester le le foncionnement des deux fichiers ajouter ce code a l'index.php
+<div class="org-src-container">
+<pre class="src src-php">// Pour tester le le foncionnement des deux fichiers ajouter ce code a l'index.php
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(dirname(__FILE__)));
 $uri = $_SERVER['REQUEST_URI'];
@@ -316,12 +316,13 @@ print_r($uri);
 </pre>
 </div>
 </div>
+</div>
 
-<div id="outline-container-orga4ead09" class="outline-2">
-<h2 id="orga4ead09"><span class="section-number-2">3</span> Création de la class config dans le répertoire lib</h2>
+<div id="outline-container-org4dc5a01" class="outline-2">
+<h2 id="org4dc5a01"><span class="section-number-2">3</span> Création de la class config dans le répertoire lib</h2>
 <div class="outline-text-2" id="text-3">
-<pre class="example">
-class Config{
+<div class="org-src-container">
+<pre class="src src-php">class Config{
 
     protected static $settings = array();
 
@@ -337,11 +338,12 @@ class Config{
 </pre>
 </div>
 </div>
-<div id="outline-container-orgb2f9c0a" class="outline-2">
-<h2 id="orgb2f9c0a"><span class="section-number-2">4</span> Création du router   dans le répertoire lib</h2>
+</div>
+<div id="outline-container-orgfcaada2" class="outline-2">
+<h2 id="orgfcaada2"><span class="section-number-2">4</span> Création du router   dans le répertoire lib</h2>
 <div class="outline-text-2" id="text-4">
-<pre class="example">
-
+<div class="org-src-container">
+<pre class="src src-php">
 class Router{
 
     protected $uri;
@@ -422,11 +424,12 @@ class Router{
 </pre>
 </div>
 </div>
-<div id="outline-container-org2e2fa08" class="outline-2">
-<h2 id="org2e2fa08"><span class="section-number-2">5</span> Création de la class init dans le répertoire lib</h2>
+</div>
+<div id="outline-container-org53d9a1c" class="outline-2">
+<h2 id="org53d9a1c"><span class="section-number-2">5</span> Création de la class init dans le répertoire lib</h2>
 <div class="outline-text-2" id="text-5">
-<pre class="example">
-//require_once(ROOT.DS.'config'.DS.'config.php');
+<div class="org-src-container">
+<pre class="src src-php">//require_once(ROOT.DS.'config'.DS.'config.php');
 spl_autoload_register('mvc_autoloader');
 function mvc_autoloader($class_name){
     $lib_path = ROOT.DS.'lib'.DS.strtolower($class_name).'.class.php';
@@ -450,11 +453,12 @@ function __($key, $default_value = ''){
 </pre>
 </div>
 </div>
-<div id="outline-container-org88ce063" class="outline-2">
-<h2 id="org88ce063"><span class="section-number-2">6</span> Ajouter un code de test dans config.php</h2>
+</div>
+<div id="outline-container-org5471b23" class="outline-2">
+<h2 id="org5471b23"><span class="section-number-2">6</span> Ajouter un code de test dans config.php</h2>
 <div class="outline-text-2" id="text-6">
-<pre class="example">
-Config::set('site_name','you site name');
+<div class="org-src-container">
+<pre class="src src-php">Config::set('site_name','you site name');
 # and this code to infex.php
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(dirname(__FILE__)));
@@ -464,9 +468,10 @@ $router = new Router($_SERVER['REQUEST_URI']);
 </div>
 </div>
 </div>
+</div>
 <div id="postamble" class="status">
 <p class="author">Auteur: Farouk Touil</p>
-<p class="date">Created: 2019-07-31 mer. 21:18</p>
+<p class="date">Created: 2019-08-06 mar. 21:51</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

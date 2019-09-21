@@ -1,4 +1,4 @@
 #+SETUPFILE: setup/theme-readtheorg-local.setup
 
 * Créer un système mvc multi-lang   
-[[https://farouktouil.github.io/Les%2520bons%2520pratiques%2520du%2520d%25C3%25A9veloppeur.html][Les bases du mvc]]
+[[https://farouktouil.github.io/lib/php/mvc/web/index.html][Les bases du mvc]]

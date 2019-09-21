@@ -1,10 +1,8 @@
-/temp
+# find . -type f -name *.org | cut -c 3- >> .gitignore
+
 /styles
-/Les bons pratiques du développeur.pdf
-/Les bons pratiques du développeur.tex
-/mvc.html
-/mvc.org
-/mvc.pdf
-/mvc.tex
-/index.org
 /.emacs.d
+/setup
+*.org
+*.tex
+index.org

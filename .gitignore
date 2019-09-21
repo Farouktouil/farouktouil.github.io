@@ -1,8 +1,5 @@
 # find . -type f -name *.org | cut -c 3- >> .gitignore
 
-/styles
-/.emacs.d
-/setup
 *.org
 *.tex
 index.org

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
 <head>
-<!-- 2020-03-06 ven. 19:18 -->
+<!-- 2020-04-20 lun. 20:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MVC AVEC PHP (Formation)</title>
@@ -200,50 +201,28 @@
 <script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
 <script type="text/javascript" src="styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.cacheClassElem = elem.className;
+         elem.cacheClassTarget = target.className;
+         target.className = "code-highlighted";
+         elem.className   = "code-highlighted";
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(elem.cacheClassElem)
+         elem.className = elem.cacheClassElem;
+       if(elem.cacheClassTarget)
+         target.className = elem.cacheClassTarget;
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 </head>
 <body>
@@ -253,13 +232,7 @@ for the JavaScript code in this tag.
 <h2>Table des matières</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6e527db">1. Création du répertoire de  mvc</a></li>
-<li><a href="#org2755f38">2. Création de deux  fichiers .htaccess</a></li>
-<li><a href="#orgb56c7e9">3. Création de la class config dans le répertoire lib</a></li>
-<li><a href="#org364f3e6">4. Création du router   dans le répertoire lib</a></li>
-<li><a href="#orgd4d37d3">5. Création de la class init dans le répertoire lib</a></li>
-<li><a href="#orgc2cc071">6. Ajouter un code de test dans config.php</a></li>
-<li><a href="#orgb019ffc">7. Faire des modifications dans la classe router</a></li>
+<li><a href="#org7a1fff1">1. formation nestjs</a></li>
 </ul>
 </div>
 </div>
@@ -268,222 +241,13 @@ for the JavaScript code in this tag.
 
 
 
-
-<div id="outline-container-org6e527db" class="outline-2">
-<h2 id="org6e527db"><span class="section-number-2">1</span> Création du répertoire de  mvc</h2>
-<div class="outline-text-2" id="text-1">
-<ul class="org-ul">
-<li>config</li>
-<li>controllers</li>
-<li>models</li>
-<li>views</li>
-<li>lang</li>
-<li>lib</li>
-<li>webroot  uploads/css/js/img/index.php</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org2755f38" class="outline-2">
-<h2 id="org2755f38"><span class="section-number-2">2</span> Création de deux  fichiers .htaccess</h2>
-<div class="outline-text-2" id="text-2">
-<div class="org-src-container">
-<pre class="src src-php">   #maintenant je crée deux fichiers htaccess un à la racine et l'autre
-  # dans le répertoire webroot   
-&lt;IfModule mod_rewrite.c&gt;
-# posé ce ficher a la racine du projet
-    RewriteEngine on
-    RewriteRule ^$ webroot/ [L]
-    RewriteRule (.*) webroot/$1 [L]
-&lt;/IfModule&gt;
-</pre>
-</div>
-
-<div class="org-src-container">
-<pre class="src src-php">&lt;IfModule mod_rewrite.c&gt;
-# posé ce fichier dans le répertoire webroot
-    RewriteEngine on
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php [PT,L]
-&lt;/IfModule&gt;
-</pre>
-</div>
-
-<div class="org-src-container">
-<pre class="src src-php">// Pour tester le le foncionnement des deux fichiers ajouter ce code a l'index.php
-define('DS', DIRECTORY_SEPARATOR);
-define('ROOT', dirname(dirname(__FILE__)));
-$uri = $_SERVER['REQUEST_URI'];
-print_r($uri);
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgb56c7e9" class="outline-2">
-<h2 id="orgb56c7e9"><span class="section-number-2">3</span> Création de la class config dans le répertoire lib</h2>
-<div class="outline-text-2" id="text-3">
-<div class="org-src-container">
-<pre class="src src-php">class Config{
-
-    protected static $settings = array();
-
-    public static function get($key){
-        return isset(self::$settings[$key]) ? self::$settings[$key] : null;
-    }
-
-    public static function set($key, $value){
-        self::$settings[$key] = $value;
-    }
-
-}
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-org364f3e6" class="outline-2">
-<h2 id="org364f3e6"><span class="section-number-2">4</span> Création du router   dans le répertoire lib</h2>
-<div class="outline-text-2" id="text-4">
-<div class="org-src-container">
-<pre class="src src-php">
-class Router{
-
-    protected $uri;
-
-    protected $controller;
-
-    protected $action;
-
-    protected $params;
-
-    protected $route;
-
-    protected $method_prefix;
-
-    protected $language;
-
-    /**
-     * @return mixed
-     */
-    public function getUri()
-    {
-        return $this-&gt;uri;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getController()
-    {
-        return $this-&gt;controller;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAction()
-    {
-        return $this-&gt;action;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getParams()
-    {
-        return $this-&gt;params;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRoute()
-    {
-        return $this-&gt;route;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMethodPrefix()
-    {
-        return $this-&gt;method_prefix;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLanguage()
-    {
-        return $this-&gt;language;
-    }
-
-    public function __construct($uri){
-        print_r('OK! '.$uri);
-        }
-}
-
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-orgd4d37d3" class="outline-2">
-<h2 id="orgd4d37d3"><span class="section-number-2">5</span> Création de la class init dans le répertoire lib</h2>
-<div class="outline-text-2" id="text-5">
-<div class="org-src-container">
-<pre class="src src-php">//require_once(ROOT.DS.'config'.DS.'config.php');
-spl_autoload_register('mvc_autoloader');
-function mvc_autoloader($class_name){
-    $lib_path = ROOT.DS.'lib'.DS.strtolower($class_name).'.class.php';
-    $controllers_path = ROOT.DS.'controllers'.DS.str_replace('controller', '', strtolower($class_name)).'.controller.php';
-    $model_path = ROOT.DS.'models'.DS.strtolower($class_name).'.php';
-
-    if ( file_exists($lib_path) ){
-        require_once($lib_path);
-    } elseif ( file_exists($controllers_path) ){
-        require_once($controllers_path);
-    } elseif ( file_exists($model_path) ){
-        require_once($model_path);
-    } else {
-        throw new Exception('Failed to include class: '.$class_name);
-    }
-}
-
-function __($key, $default_value = ''){
-    return Lang::get($key, $default_value);
-}
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-orgc2cc071" class="outline-2">
-<h2 id="orgc2cc071"><span class="section-number-2">6</span> Ajouter un code de test dans config.php</h2>
-<div class="outline-text-2" id="text-6">
-<div class="org-src-container">
-<pre class="src src-php">Config::set('site_name','you site name');
-# and this code to infex.php
-define('DS', DIRECTORY_SEPARATOR);
-define('ROOT', dirname(dirname(__FILE__)));
-require_once(ROOT.DS.'lib'.DS.'init.php');
-$router = new Router($_SERVER['REQUEST_URI']);
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-orgb019ffc" class="outline-2">
-<h2 id="orgb019ffc"><span class="section-number-2">7</span> Faire des modifications dans la classe router</h2>
-<div class="outline-text-2" id="text-7">
-<div class="org-src-container">
-<pre class="src src-php">
-</pre>
-</div>
-</div>
+<div id="outline-container-org7a1fff1" class="outline-2">
+<h2 id="org7a1fff1"><span class="section-number-2">1</span> formation nestjs</h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Auteur: Farouk Touil</p>
-<p class="date">Created: 2020-03-06 ven. 19:18</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2020-04-20 lun. 20:00</p>
 </div>
 </body>
 </html>

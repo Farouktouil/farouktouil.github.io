@@ -4,7 +4,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
 <head>
-<!-- 2020-04-20 lun. 20:58 -->
+<!-- 2020-04-20 lun. 21:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>NestJs avec Angular (Formation)</title>
@@ -232,7 +232,8 @@
 <h2>Table des matières</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org678cb54">1. Que ce que Nestjs</a></li>
+<li><a href="#orgb3f43a9">1. Overview</a></li>
+<li><a href="#org4fdb837">2. Installation</a></li>
 </ul>
 </div>
 </div>
@@ -241,36 +242,36 @@
 
 
 
-<div id="outline-container-org678cb54" class="outline-2">
-<h2 id="org678cb54"><span class="section-number-2">1</span> Que ce que Nestjs</h2>
+<div id="outline-container-orgb3f43a9" class="outline-2">
+<h2 id="orgb3f43a9"><span class="section-number-2">1</span> Overview</h2>
 <div class="outline-text-2" id="text-1">
+<p>
+The Nest CLI is a command-line interface tool that helps you to initialize, develop, and maintain your Nest applications. It assists in multiple ways, including scaffolding the project, serving it in development mode, and building and bundling the application for production distribution. It embodies best-practice architectural patterns to encourage well-structured apps.
+</p>
 </div>
-<div id="outline-container-orgb589f23" class="outline-3">
-<h3 id="orgb589f23"><span class="section-number-3">1.1</span> intro a jestjs</h3>
-<div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-org8df21e6" class="outline-4">
-<h4 id="org8df21e6"><span class="section-number-4">1.1.1</span> Concept et autre</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-org4fdb837" class="outline-2">
+<h2 id="org4fdb837"><span class="section-number-2">2</span> Installation</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Note: In this guide we describe using npm to install packages, including the Nest CLI. Other package managers may be used at your discretion. With npm, you have several options available for managing how your OS command line resolves the location of the nest CLI binary file. Here, we describe installing the nest binary globally using the -g option. This provides a measure of convenience, and is the approach we assume throughout the documentation. Note that installing anynpm package globally leaves the responsibility of ensuring they&rsquo;re running the correct version up to the user. It also means that if you have different projects, each will run the same version of the CLI. A reasonable alternative is to use the npx program (or similar features with other package managers) to ensure that you run a managed version of the Nest CLI. We recommend you consult the npx documentation and/or your DevOps support staff for more information.
+</p>
+
+<p>
+Install the CLI globally using the npm install -g command (see the Note above for details about global installs).
+</p>
+
+
 <div class="org-src-container">
-<pre class="src src-php">   #maintenant je crée deux fichiers htaccess un à la racine et l'autre
-  # dans le répertoire webroot
-&lt;IfModule mod_rewrite.c&gt;
-# posé ce ficher a la racine du projet
-    RewriteEngine on
-    RewriteRule ^$ webroot/ [L]
-    RewriteRule (.*) webroot/$1 [L]
-&lt;/IfModule&gt;
+<pre class="src src-php">$ npm install -g @nestjs/cli
 </pre>
-</div>
-</div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Auteur: Farouk Touil</p>
-<p class="date">Created: 2020-04-20 lun. 20:58</p>
+<p class="date">Created: 2020-04-20 lun. 21:51</p>
 </div>
 </body>
 </html>

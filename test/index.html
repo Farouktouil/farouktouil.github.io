@@ -1,0 +1,3356 @@
+
+<!doctype html>
+<!--[if lte IE 9]> <html class="lte-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+
+
+ <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<head id="Head1" runat="server">
+    <title></title>
+    
+    <link href="Ressources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+   
+    <link href="Ressources/css/default.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/css/component.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/css/flat-ui.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/css/app.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/Boostrap/plugins/iCheck/all.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/Boostrap/fonts/css.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/toolbar/css/font/css.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/Boostrap/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/css/mbExtruder.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/toolbar/css/mb.containerPlus.css" rel="stylesheet" type="text/css" />
+
+    <script src="Ressources/js/jQuery-2.1.4.min.js" type="text/javascript" ></script>
+    <script src="Ressources/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Ressources/js/demo.js" type="text/javascript"></script>
+    <script src="Ressources/js/app.js" type="text/javascript"></script>
+    <script src="Ressources/Boostrap/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+    <script src="Ressources/js/modernizr.custom.js" type="text/javascript"></script>
+
+
+<script src="Ressources/js/inc/jquery.hoverIntent.min.js" type="text/javascript"></script>
+
+<script src="Ressources/js/inc/jquery.mb.flipText.js" type="text/javascript"></script>
+<script src="Ressources/js/inc/mbExtruder.js" type="text/javascript"></script>
+<script src="Ressources/toolbar/inc/jquery-ui.js" type="text/javascript"></script>
+<script src="Ressources/toolbar/inc/jquery.mb.containerPlus.js" type="text/javascript"></script>
+<script src="Ressources/toolbar/inc/mb.containerPlus.plugins.js" type="text/javascript"></script>
+
+    <link href="Ressources/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="Ressources/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="Ressources/js/main.js" type="text/javascript"></script>
+    <script src="Ressources/js/modernizr.js" type="text/javascript"></script>
+
+  
+
+
+
+
+<asp:ContentPlaceHolder ID="head" runat="server">
+          
+    </asp:ContentPlaceHolder>
+    </head>
+
+ <body>
+  
+    <div class="container">
+    
+
+
+
+
+
+ 
+
+
+
+
+ 
+    
+    <style>
+
+     
+        #wrapper{
+            position: absolute;
+       
+
+   
+
+        }
+
+        .container2
+        {
+              z-index:99;
+            width: 500px;
+            height: auto;
+        }
+
+        #dock{
+            position: fixed;
+            top: 0;
+            left:0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+
+        #actions
+        {
+            
+            position: relative;
+            top:70px;
+            padding: 50px;
+        }
+
+        #actions button{
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid white;
+            padding: 7px;
+            display: inline-block;
+            margin: 3px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background: #d4d4d4;
+        }
+
+        #actions button:hover{
+            background: #ffc000;
+        }
+
+    </style>
+
+
+<div id="wrapper">
+
+
+<!--     <div id="cont3" class="container" style="position: absolute; top:130px; left: 300px; height: auto; opacity:1" data-icon="css/icons/browser.png" data-drag=true data-resize=false data-collapsable=true data-close=true data-containment="document" data-modal=true data-buttons="fullscreen,close" data-autoresize="true">
+        <h2>Container 1</h2>
+        <div id="cont1Content">
+            <p>This is a modal window and it is created adding data-modal=true to the element constructor. It can't be resized, it's centered on window, it's white skinned.</p>
+            <br>
+            <button onclick="$('#cont1').containerize('showdata');$(this).hide();">show properties</button>
+            <p>Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. </p>
+            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+        </div>
+    </div> -->
+
+   <!--  <div id="cont3" class="container" style=" position:absolute; top:180px; left: 400px; height: 350px; opacity:1" data-centeronwindow=true data-icon="css/icons/chart.png" data-drag=true data-resize=true  data-dock="dock" data-iconize="dock" data-collapsable=true data-containment="document"  data-resizegrid="100,100" data-buttons="changecontent,dock,fullscreen,close">
+        <h2>Container 2</h2>
+        <p>This can be resized but only on a grid of 100x100, it's centered on window, it's white skinned, it has custom buttons and a custom icon.</p>
+        <br>
+        <button onclick="$('#cont2').containerize('showdata');$(this).hide();">show properties</button>
+        <p>Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. </p>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+<div id="cont3" class="container2" style=" top:130px; left: 100px;   width: 940px;" data-drag="true" data-skin="black" data-buttons="fullscreen,close" data-dock="dock"  data-icon="">
+<h2>
+<img src="Ressources/toolbar/css/icons/biologie.png" alt="Alternate Text" style="width:40px;" /> Demandes Biologiques</h2>
+<uc3:UcDemandesBiologique ID="UcDemandesBiologique1" runat="server" />
+</div>
+
+
+
+<div id="cont4" class="container2" style=" top:130px; left: 100px;   width: 940px;" data-drag="true" data-skin="black" data-buttons="fullscreen,close" data-dock="dock"  data-icon="">
+<h2>
+<img src="Ressources/toolbar/css/icons/radiologie.png" alt="Alternate Text" style="width:40px;" /> Demandes Radiologique</h2>
+
+    <uc4:DemandesRadiologique ID="DemandesRadiologique1" runat="server" />
+
+</div>
+
+
+<div id="cont5" class="container2" style=" top:130px; left: 100px;   width: 940px;" data-drag="true" data-skin="black" data-buttons="fullscreen,close" data-dock="dock"  data-icon="">
+<h2>
+<img src="Ressources/toolbar/css/icons/medicaments.png" alt="Alternate Text" style="width:40px;" />Ordonnance</h2>
+
+    <uc4:DemandesRadiologique ID="DemandesRadiologique2" runat="server" />
+
+</div>
+
+
+
+
+
+
+
+    <div id="dock"></div>
+
+</div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<div id="extruderRight" class="{title:'Les explorations', url:''}">
+<style>td{  padding:10px;}.imghover { opacity: 1.0;filter: alpha(opacity=100);
+/* For IE8 and earlier */}.imghover:hover{opacity: 0.4;filter: alpha(opacity=40); /* For IE8 and earlier */}
+</style>
+
+   
+
+
+
+
+
+
+
+
+<table style="float:left;margin-top:50px;" border="0" cellpadding="0" cellspacing="0">
+
+<tr>
+<td>
+    </td>
+     <td>
+          <button style="background:none;border:none;" onclick='if($("#cont5").get(0).isClosed) $("#cont3").containerize("open",100); else $("#cont3").containerize("close",100);'><img class="imghover"  src="Ressources/images/ObservationsMedicales/Medicaments.png" style="width:85px;height:74px;"/></button>
+  
+  </td> 
+</tr>
+
+<tr> 
+    
+
+
+     <div id="actions">
+
+ 
+
+    </div>
+
+
+
+<tr>
+<td>
+
+    </td>
+  <td>
+          <button style="background:none;border:none;" onclick='if($("#cont4").get(0).isClosed) $("#cont3").containerize("open",100); else $("#cont3").containerize("close",100);'> <img class="imghover"  src="Ressources/images/ObservationsMedicales/biologie.png" style="width:85px;height:74px;"/></button>
+  
+  </td>    
+</tr>
+
+<tr>
+    <td>
+    </td>
+      <td>
+          <button style="background:none;border:none;" onclick='if($("#").get(0).isClosed) $("#cont3").containerize("open",100); else $("#cont3").containerize("close",100);'> <img class="imghover" src="Ressources/images/ObservationsMedicales/radiologie.png"style="width:85px;height:74px;"/></button>
+  
+  </td>  
+</tr>
+
+
+
+
+
+<tr>
+    <td>
+    </td>
+      <td>
+          <button style="background:none;border:none;" onclick='if($("#").get(0).isClosed) $("#cont3").containerize("open",100); else $("#cont3").containerize("close",100);'> <img class="imghover" src="Ressources/images/ObservationsMedicales/specialiteMedical.png" style="width:85px;height:74px;"/></button>
+  
+  </td>  
+</tr>
+
+
+
+
+<tr>
+    <td>
+    </td>
+      <td>
+          <button style="background:none;border:none;" onclick='if($("#").get(0).isClosed) $("#cont3").containerize("open",100); else $("#cont3").containerize("close",100);'><img class="imghover" src="Ressources/images/ObservationsMedicales/antropologie.png" style="width:85px;height:74px;"/></button>
+  
+  </td>  
+</tr>
+
+
+
+<tr>
+    <td>
+    </td>
+      <td>
+          <button style="background:none;border:none;" onclick='if($("#").get(0).isClosed) $("#cont3").containerize("open",100); else $("#cont3").containerize("close",100);'> <img class="imghover" src="Ressources/images/ObservationsMedicales/Transfusion.png" style="width:85px;height:74px;"/></button>
+  
+  </td>  
+</tr>
+
+
+
+
+
+
+
+
+</table> 
+
+
+</div>
+
+
+
+
+
+
+
+    
+<div id="extruderRightBottom" class=" {title:'Les Résultats', url:''}">
+<style>td{  padding:10px;}.imghover { opacity: 1.0;filter: alpha(opacity=100);
+/* For IE8 and earlier */}.imghover:hover{opacity: 0.4;filter: alpha(opacity=40); /* For IE8 and earlier */}
+</style>
+
+ <div class="rightBottomHeight">
+<table style="float:left;margin-top:250px;" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><img class="imghover"  src="Ressources/images/ObservationsMedicales/biologie.png" style="width:85px;height:74px;"/>
+    </td>
+</tr>
+
+<tr>
+    <td><img class="imghover" src="Ressources/images/ObservationsMedicales/radiologie.png"style="width:85px;height:74px;"/>
+    </td>
+</tr>
+
+
+<tr>
+    <td> <img class="imghover" src="Ressources/images/ObservationsMedicales/specialiteMedical.png" style="width:85px;height:74px;"/>
+    </td>
+</tr>
+
+
+
+<tr>
+    <td> <img class="imghover" src="Ressources/images/ObservationsMedicales/antropologie.png" style="width:85px;height:74px;"/>
+    </td>
+</tr>
+     
+
+
+
+</table> 
+
+
+
+<table  style="float:left;margin-right:-20px;margin-top:300px;" border="0" cellpadding="0" cellspacing="0">
+             
+
+<tr>
+<td><img class="imghover" src="Ressources/images/ObservationsMedicales/ActesMedicauxChirurgicaux.png" style="width:85px;height:74px;"/>
+</td>
+</tr>
+
+
+
+
+
+
+<!--first popup modal-->
+<tr>
+<td><img class="imghover" src="Ressources/images/ObservationsMedicales/parametre.png" style="width:85px;height:74px;" data-toggle="modal" data-target="#myModal"/>
+</td>
+</tr>
+<!-- Modal -->
+<div class="modal fade" id="Div3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<!--<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+ 
+</div>-->
+  
+   
+
+<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+</div>
+</div>
+</div>
+</div>
+<!-- Modal -->
+<!--first popup modal-->
+
+<tr>
+<td><img class="imghover" src="Ressources/images/ObservationsMedicales/antecedent.png"  style="width:85px;height:74px;"/>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+
+
+    <style type="text/css">
+    .title{color:red;}
+    </style>
+
+
+
+
+    
+<div id="extruderLeft" class=" {title:'Archives', url:''}">
+
+
+<section id="cd-timeline" class="cd-container">
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <img src="Ressources/images/imgtimeline/cd-icon-picture.svg" alt="Picture">
+            </div> <!-- cd-timeline-img -->
+           <div class="cd-timeline-content">
+                <h2>Title of section 1</h2>
+                <p>Lorem ipsum</p>
+                <a href="#0" class="cd-read-more">Read more</a>
+                <span class="cd-date">Jan 14</span>
+            </div> <!-- cd-timeline-content -->
+            
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="Ressources/images/imgtimeline/cd-icon-movie.svg" alt="Movie">
+            </div> <!-- cd-timeline-img -->
+
+        
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <img src="Ressources/images/imgtimeline/cd-icon-picture.svg" alt="Picture">
+            </div> <!-- cd-timeline-img -->
+
+        
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="Ressources/images/imgtimeline/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->
+
+        
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="Ressources/images/imgtimeline/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->
+
+        
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="Ressources/images/imgtimeline/cd-icon-movie.svg" alt="Movie">
+            </div> <!-- cd-timeline-img -->
+
+            
+        </div> <!-- cd-timeline-block -->
+    </section> <!-- cd-timeline -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-12"  window.open('pageb.html','nom_de_ma_popup','menubar=no, scrollbars=no, top=100, left=100, width=300, height=200');>
+<div class="row box box-solid" style="position:absolute;margin-top:50px;padding:20px;background-color: rgba(8, 41, 49, 0.78);
+ box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+
+
+
+
+ <span class="btn-sm pull-right" data-widget="remove">  <img class="close2" src="Ressources/images/close.png" />
+</span>
+
+<div class="form-horizontal">
+<div class="box-body">
+
+<!--ACCUEIL_CLINIQUE-->
+ <div class="row">
+  <uc2:Uc_User ID="Uc_User1" runat="server" />
+  <div class="col-md-12">
+
+
+<div class="row">
+   
+    
+        <div class="col-xs-1"> <!-- required for floating -->
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs tabs-left sideways">
+            <li class="active"><a href="#HDM" data-toggle="tab">HDM</a></li>
+            <li><a href="#general" data-toggle="tab">Général</a></li>
+            <li><a href="#CervicoCephalique" data-toggle="tab">Cervico-céphalique</a></li>
+            <li><a href="#Thorax" data-toggle="tab">Thorax</a></li>
+            <li><a href="#Abdomen" data-toggle="tab">Abdomen</a></li>
+          
+          </ul>
+        </div>
+
+<div class="col-xs-10   box-solid   collapsed-box"  style="position: relative;    border: 2px solid #dce4ec;
+border-color:     rgba(29, 147, 144, 0.71);
+background-color: rgba(4, 20, 24, 0.24);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+padding:20px; ">
+<!-- Tab panes -->
+<div class="tab-content">
+
+
+<!--/////////////////////////DEBUT CONTENAIRE   HDM////////////////////////////////-->
+<div class="tab-pane active" id="HDM">
+<asp:Label id="LB_HDM" runat="server" Text="HDM"  class="col-xs-2 control-label" >HDM</asp:Label>
+<div class="col-xs-10">
+<asp:TextBox id="TextBox5" runat="server"  class="adresse form-control input-sm" rows="15"  TextMode="MultiLine"></asp:TextBox>
+</div>
+   
+</div>
+<!--///////////////////////////FIN  CONTENAIRE CERVICO CEPHALIQUE////////////////////////////////-->
+
+
+
+
+<!--/////////////////////////DEBUT CONTENAIRE  GENERAL////////////////////////////////-->
+<div class="tab-pane" id="general">
+    
+                     
+<asp:Label id="LB_ETAT_DU_PATIENT" runat="server"  Text="Etat de patient" class="col-xs-2 control-label">Etat de patient</asp:Label>
+<div class="col-xs-2">
+<asp:DropDownList ID="DropDownList1" runat="server" class="form-control  input-md">
+ 
+</asp:DropDownList>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+ <!--LB_FC batt/min -->
+                <asp:Label id="LB_FC" runat="server"  Text="FC (batt/min)" class="col-xs-2 control-label">FC (batt/min)</asp:Label>
+      
+                <div class="col-xs-1">
+                <asp:TextBox id="TB_FC" runat="server"  class="form-control input-md" ></asp:TextBox>
+              
+                </div>
+
+
+
+ <!--LB_FR cycles/min-->
+                <asp:Label id="LB_FR" runat="server"  Text="FR (cycles/min)" class="col-xs-2 control-label">FR (cycles/min)</asp:Label>
+                <div class="col-xs-1">
+                <asp:TextBox id="TB_FR" runat="server"  class="form-control input-md" ></asp:TextBox>
+               
+                </div>
+
+
+
+
+ <!--LB_TEMPERATURE °C-->
+                <asp:Label id="LB_TEMPERATURE" runat="server"  Text="T° (°C)" class="col-xs-1 control-label">T° (°C)</asp:Label>
+                <div class="col-xs-1">
+                <asp:TextBox id="TB_TEMPERATURE" runat="server"  class="form-control input-md" ></asp:TextBox>
+                 
+                </div>
+
+
+                    <div class="row">
+                    </div>
+
+
+
+
+
+
+  <div class="box-header ">
+                <h3 class="box-title"><strong>
+<asp:Label id="Label17" runat="server" Text="Tension artérielle" style="color: orange;">Tension artérielle</asp:Label></strong></h3>
+
+  </div>
+
+<!--LB_SYS mm Hg-->
+                <asp:Label id="LB_TA_SYS" runat="server"  Text="SYS (mm Hg)" class="col-xs-2 control-label">SYS (mm Hg)</asp:Label>
+                <div class="col-xs-1">
+                <asp:TextBox id="TB_TA_SYS" runat="server"  class="form-control input-md" ></asp:TextBox>
+               
+                </div>
+
+
+
+
+
+
+
+
+                 <!--LB_DIA mm Hg-->
+                <asp:Label id="LB_TA_DIA" runat="server"  Text="DIA (mm Hg)" class="col-xs-2 control-label">DIA (mm Hg)</asp:Label>
+                <div class="col-xs-1">
+                <asp:TextBox id="TB_TA_DIA" runat="server"  class="form-control input-md" ></asp:TextBox>
+             
+                </div>
+
+
+                <asp:Label id="Label4" runat="server" Text="Apyrexie" class="col-xs-1 control-label"  >Apyrexie</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>
+
+
+
+                <asp:Label id="Label8" runat="server" Text="Hyperthermie" class="col-xs-1 control-label"  >Hyperthermie</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:20px;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:20px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:20px;"></ins></div>
+</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="row">
+                    </div>
+
+
+            <div class="box-header ">
+<!--NOMBRE_DONS_ANTERIEURS -->
+<h3 class="box-title"><strong>
+<asp:Label id="LB_DOSSIER_ADMINISTRATIF" runat="server" Text="Coloration des conjonctives" style="color: orange;"></asp:Label>Coloration des conjonctives</strong></h3>
+
+</div>
+
+
+<asp:Label id="Label2" runat="server" Text="Normale" class="col-xs-1 control-label"  >Normale</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>
+
+
+<asp:Label id="Label1" runat="server" Text="Pâleur" class="col-xs-1 control-label"  >Pâleur</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+
+
+<asp:Label id="Label3" runat="server" Text="Ictère" class="col-xs-1 control-label"  >Ictère</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>
+
+
+
+
+
+<div class="col-xs-6">
+<asp:TextBox id="TextBox1" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+                    <div class="row">
+                    </div>
+
+
+
+
+            <div class="box-header ">
+<!--NOMBRE_DONS_ANTERIEURS -->
+<h3 class="box-title"><strong>
+<asp:Label id="Label13" runat="server" Text="Respiration
+" style="color: orange;"></asp:Label>Respiration</strong></h3>
+
+</div>
+
+
+
+   <asp:Label id="Label5" runat="server" Text="Normale" class="col-xs-1 control-label"  >Normale</asp:Label>
+                <label class="col-xs-1">
+                <div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                </label>
+
+              
+                <asp:Label id="Label6" runat="server" Text="Eupnéique
+" class="col-xs-1 control-label"  >Eupnéique</asp:Label>
+                <label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                </label>  
+
+             
+
+  <asp:Label id="Label7" runat="server" Text="Dyspnétique
+" class="col-xs-1 control-label"  >Dyspnétique</asp:Label>
+                <label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                </label>
+
+
+
+
+
+                <div class="col-xs-6">
+<asp:TextBox id="TextBox2" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+                    <div class="row">
+                    </div>
+
+
+
+
+
+            <div class="box-header ">
+<!--NOMBRE_DONS_ANTERIEURS -->
+<h3 class="box-title"><strong>
+<asp:Label id="Label14" runat="server" Text="Etat d'hydratation
+
+" style="color: orange;">Etat d'hydratation</asp:Label></strong></h3>
+
+</div>
+
+
+
+
+
+
+
+
+                
+   <asp:Label id="Label9" runat="server" Text="Normale" class="col-xs-1 control-label"  >Normale</asp:Label>
+                <label class="col-xs-1">
+                <div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                </label>
+
+       
+                <asp:Label id="Label10" runat="server" Text="Déshydraté" class="col-xs-1 control-label"  >Déshydraté</asp:Label>
+                <label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                </label>  
+
+
+  <asp:Label id="Label11" runat="server" Text="Oedèmes" class="col-xs-1 control-label"  >Oedèmes</asp:Label>
+                <label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+                </label>
+
+
+
+
+
+
+                <div class="col-xs-6">
+<asp:TextBox id="TextBox3" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+
+<div class="row">
+</div>
+
+
+
+  <!--_DATE_ADMISSION-->
+                <asp:Label id="LB_PATIENT" runat="server"  Text="Examen cutanéomuqueux" class="col-xs-3 control-label">Examen cutanéomuqueux</asp:Label>
+                <div class="col-xs-9">
+               <asp:TextBox id="TextBox4" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+                </div>
+
+
+ </div>
+<!--///////////////////////////FIN  CONTENAIRE GENERAL ////////////////////////////////-->
+
+
+
+
+
+<!--/////////////////////////DEBUT CONTENAIRE CERVICO CEPHALIQUE////////////////////////////////-->
+<div class="tab-pane" id="CervicoCephalique">
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Signes fonctionnels</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+
+
+
+
+
+<asp:Label id="LB_ABSENTS" runat="server" Text="Absents" class="col-xs-1 control-label"  >Absents</asp:Label>
+<label class="col-xs-1">
+<div  class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="TB_ABSENTS" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>
+
+
+<asp:Label id="LB_DYSPHONIE" runat="server" Text="Dysphonie" class="col-xs-1 control-label"  >Dysphonie</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="TB_DYSPHONIE" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+
+
+<asp:Label id="LB_DYSPHAGIE" runat="server" Text="Dysphagie" class="col-xs-1 control-label"  >Dysphagie</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="TB_DYSPHAGIE"  type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>
+
+
+<asp:Label id="LB_DOULEURS" runat="server" Text="Douleurs" class="col-xs-1 control-label"  >Douleurs</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="TB_DOULEURS" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>
+
+
+
+
+
+<div class="col-xs-4">
+<asp:TextBox id="TextBox6" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+</div>
+ </div>
+
+     <!--*************************************************************************--> 
+     <!--*************************************************************************--> 
+     <!--*************************************************************************--> 
+     <!--*************************************************************************--> 
+     
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+ box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+                <div class=" ui-sortable-handle">
+                 
+                  <p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Inspection</p>
+                  <div class="box-tools pull-right">
+                   
+                    
+                  </div>
+                </div>
+                <div class="box-body border-radius-none" >
+
+
+
+
+
+
+
+
+<asp:Label id="Label18" runat="server" Text="Gencives" class="col-xs-1 control-label"  >Gencives</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox2" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+<div class="col-xs-4">
+<asp:TextBox id="TextBox11" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<asp:Label id="Label19" runat="server" Text="Langue" class="col-xs-1 control-label"  >Langue</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox3"  type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>
+
+<div class="col-xs-4">
+<asp:TextBox id="TextBox12" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+<asp:Label id="Label20" runat="server" Text="Dentition" class="col-xs-1 control-label"  >Dentition</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox4" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>
+
+
+
+
+
+<div class="col-xs-4">
+<asp:TextBox id="TextBox7" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+                    <div class="row">
+                    </div>
+
+<asp:Label id="LB_PFARYNX" runat="server" Text="Pharynx" class="col-xs-1 control-label"  >Pharynx</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox1" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+<div class="col-xs-4">
+<asp:TextBox id="TB_PFARYNX" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+<asp:Label id="LB_LEVRES" runat="server" Text="Lèvres" class="col-xs-1 control-label"  >Lèvres</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox5" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+<div class="col-xs-4">
+<asp:TextBox id="TB_LEVRES" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+ <div class="row">
+                    </div>
+
+
+
+<asp:Label id="LB_PAUPIERES" runat="server" Text="Paupières" class="col-xs-1 control-label"  >Paupières</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox6" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+<div class="col-xs-4">
+<asp:TextBox id="TB_PAUPIERES" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+<asp:Label id="LB_YEUX" runat="server" Text="Yeux" class="col-xs-1 control-label"  >Yeux</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox7" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+<div class="col-xs-4">
+<asp:TextBox id="TB_YEUX" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+</div>
+ </div>
+
+   <!--*************************************************************************--> 
+     <!--*************************************************************************--> 
+     <!--*************************************************************************--> 
+     <!--*************************************************************************--> 
+     
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+ box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+                <div class=" ui-sortable-handle">
+                 
+                  <p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Palpation </p>
+                  <div class="box-tools pull-right">
+                   
+                    
+                  </div>
+                </div>
+                <div class="box-body border-radius-none" >
+
+
+<asp:Label id="LB_AIRES_GANGLIONNAIRES" runat="server" Text="Aires ganglionnaires sus-claviculaires et cervical 
+" class="col-xs-5 control-label"  >Aires ganglionnaires sus-claviculaires et cervical 
+</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:-60px;"><input id="Checkbox8" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:-60px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:-60px;"></ins></div>
+</label>  
+
+<div class="col-xs-6">
+<asp:TextBox id="TB_AIRES_GANGLIONNAIRES" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+<asp:Label id="LB_GLANDE_THYROIDE" runat="server" Text="Glande thyroïde (lors de la déglutition)" class="col-xs-5 control-label"  >Glande thyroïde (lors de la déglutition)</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:-60px;"><input id="Checkbox9" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:-60px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:-60px;"></ins></div>
+</label>  
+
+<div class="col-xs-6">
+<asp:TextBox id="TB_GLANDE_THYROIDE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+<asp:Label id="LB_POULS_CAROTIDIENS" runat="server" Text="Pouls carotidiens" class="col-xs-5 control-label"  >Pouls carotidiens</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:-60px;"><input id="Checkbox10" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:-60px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:-60px;"></ins></div>
+</label>  
+
+<div class="col-xs-6">
+<asp:TextBox id="TB_POULS_CAROTIDIENS" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+<asp:Label id="LB_POULS_TEMPORAUX" runat="server" Text="Pouls temporaux" class="col-xs-5 control-label"  >Pouls temporaux</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:-60px;"><input id="Checkbox11" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:-60px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:-60px;"></ins></div>
+</label>  
+
+<div class="col-xs-6">
+<asp:TextBox id="TB_POULS_TEMPORAUX" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+ </div> <!--*************************************************************************--> 
+     <!--*************************************************************************--> 
+     <!--*************************************************************************--> 
+     <!--*************************************************************************--> 
+     
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+ box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+                <div class=" ui-sortable-handle">
+                 
+                  <p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Auscultation </p>
+                  <div class="box-tools pull-right">
+                   
+                    
+                  </div>
+                </div>
+                <div class="box-body border-radius-none" >
+
+
+<asp:Label id="LB_THYROIDES" runat="server" Text="Thyroïdes" class="col-xs-5 control-label"  >Thyroïdes</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:-60px;"><input id="Checkbox12" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:-60px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:-60px;"></ins></div>
+</label>  
+
+<div class="col-xs-6">
+<asp:TextBox id="TB_THYROIDES" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+<asp:Label id="LB_ARTERES_CAROTIDIENNES" runat="server" Text="Artères carotidiennes" class="col-xs-5 control-label"  >Artères carotidiennes</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:-60px;"><input id="Checkbox13" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:-60px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:-60px;"></ins></div>
+</label>  
+
+<div class="col-xs-6">
+<asp:TextBox id="TB_ARTERES_CAROTIDIENNES" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+<asp:Label id="LB_ARTERES_SOUS_CLAVIERE" runat="server" Text="Artères sous Clavière et vertébrales " class="col-xs-5 control-label"  >Artères sous Clavière et vertébrales</asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:-60px;"><input id="Checkbox14" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:-60px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:-60px;"></ins></div>
+</label>  
+
+<div class="col-xs-6">
+<asp:TextBox id="TB_ARTERES_SOUS_CLAVIERE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+</div>
+ </div>
+
+
+
+
+</div>
+<!--///////////////////////////FIN  CONTENAIRE CERVICO CEPHALIQUE////////////////////////////////-->
+
+
+
+
+
+
+
+
+
+<!--/////////////////////////DEBUT CONTENAIRE THORAX////////////////////////////////-->
+<div class="tab-pane" id="Thorax">
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Signes fonctionnels</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+
+
+
+
+          
+
+<h3 class="box-title"><asp:Label id="LB_DEFORMATION_THORACIQUE" runat="server" Text="Déformation thoracique" class="col-xs-3 control-label" style="color: orange;">Déformation thoracique</asp:Label></h3>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox22" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_ABSENT" runat="server" Text="Absente" class="col-xs-2 control-label"  >Absente</asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox20" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_EN_CARENE" runat="server" Text="En carène" class="col-xs-2 control-label"  >En carène</asp:Label>
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox21"  type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_EN_TONNEAU" runat="server" Text="En tonneau" class="col-xs-2 control-label"  >En tonneau</asp:Label>
+
+
+
+
+
+
+
+
+
+<h3 class="box-title"><asp:Label id="LB_RESPIRATION" runat="server" Text="Respiration" class="col-xs-3 control-label"   style="color: orange;">Respiration</asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox19" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_SYMETRIQUE" runat="server" Text="Symétrique" class="col-xs-2 control-label"  >Symétrique</asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox23" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_NON_SYMETRIQUE" runat="server" Text="Non symétrique" class="col-xs-2 control-label"  >Non symétrique</asp:Label>
+
+
+
+
+    <div class="row">
+    </div>
+
+
+
+
+<h3 class="box-title"><asp:Label id="LB_CIRCULATION_COLLATERALE" runat="server" Text="Circulation collatérale cave supérieure" class="col-xs-3 control-label"  style="color: orange;">Circulation collatérale cave supérieure</asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox24" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_ABSENT3" runat="server" Text="Absente" class="col-xs-2 control-label"  >Absente</asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox25" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_POSITIVE" runat="server" Text="Positive" class="col-xs-1 control-label"  >Positive</asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="TB_POSITIVE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+    <div class="row">
+    </div>
+
+
+    
+
+<h3 class="box-title"><asp:Label id="LB_TIRAGE" runat="server" Text="Tirage" class="col-xs-3 control-label"  style="color: orange;">Tirage</asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox26" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_ABSENT4" runat="server" Text="Absente" class="col-xs-2 control-label"  >Absente</asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox27" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_POSITIVE1" runat="server" Text="Positive" class="col-xs-1 control-label"  >Positive</asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="TextBox8" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 class="box-title"><asp:Label id="LB_AMPILATION_THORACIQUE" runat="server" Text="Ampliation thoracique" class="col-xs-3 control-label"  style="color: orange;">Ampliation thoracique</asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox28" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_NORMAL" runat="server" Text="Normal" class="col-xs-2 control-label"  >Normal</asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox29" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_DIMINUEE" runat="server" Text="Diminuée  " class="col-xs-1 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="TB_DIMINUEE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+</div>
+</div>
+
+<div class="tab-pane" id="Div1">
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Palpation</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox15" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_CHOC_DE_POINT" runat="server" Text="Choc de pointe" class="col-xs-2 control-label"  ></asp:Label>
+
+
+    <div class="row">
+    </div>
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox16" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_VIBRATIONS_VOCALES" runat="server" Text="Vibrations vocales" class="col-xs-2 control-label"  ></asp:Label>
+
+
+    <div class="row">
+    </div>
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox17" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_NEANT" runat="server" Text="Néant" class="col-xs-1 control-label"  ></asp:Label>
+
+    <div class="col-xs-2">
+    </div>
+
+   
+
+
+<div class="col-xs-7" style="margin-top:-50px;">
+<asp:TextBox id="TB_VIBRATIONS_VOCALES" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+<div class="tab-pane" id="Div2">
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Percussion</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox18" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_SONORITE_PULMONAIRE_NORMALE" runat="server" Text="Sonorité pulmonaire normale" class="col-xs-3 control-label"  ></asp:Label>
+
+
+
+
+  <div class="row">
+    </div>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox30" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_TYMPANISME" runat="server" Text="Tympanisme" class="col-xs-1 control-label"  ></asp:Label>
+
+
+
+   
+
+  <div class="row">
+    </div>
+
+
+  
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox35" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_MATITE" runat="server" Text="Matité" class="col-xs-3 control-label"  ></asp:Label>
+  
+ 
+ 
+  <div class="row">
+    </div>
+ 
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox31" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_NEANT5" runat="server" Text="Néant" class="col-xs-1 control-label"  ></asp:Label>
+
+    <div class="col-xs-2">
+    </div>
+
+<div class="col-xs-8" style="margin-top:-50px;">
+<asp:TextBox id="TB_MATITE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="tab-pane" id="Thorax">
+
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Auscultation</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+    <div class="box-header">
+<h3 class="box-title"><strong>
+ <asp:Label id="Label12" runat="server" Text="Pulmonaire " style="color: orange;"></asp:Label></strong></h3>
+</div>
+
+ 
+     
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_MURMURE" runat="server" Text="Murmure Vésiculaire "  style="color: orange;"></asp:Label></h3>
+</div>
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label16" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox32" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_PRESENTE" runat="server" Text="Présent" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+    <div class="row">
+    </div>
+
+
+
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label26" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox33" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_DIMINUE" runat="server" Text="Diminué" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="row">
+</div>
+
+  <!--THOSES LABELE ARE PLACE HOLDERS-->  
+<h3 class="box-title"><asp:Label id="Label33" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox34" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_ABOLI" runat="server" Text="Aboli" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+<div class="col-xs-6" style="margin-top:-50px;">
+<asp:TextBox id="TextBox10" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+<div class="row"></div>
+
+ 
+
+
+    <div class="row">
+    </div>
+    <div class="box-header">
+<h3 class="box-title"><strong>
+ <asp:Label id="LB_SOUFLE" runat="server" Text="Souffle " style="color: orange;"></asp:Label></strong></h3>
+</div>
+
+ 
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label23" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox36" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_TUBAIRE" runat="server" Text="Tubaire" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+    <div class="row">
+    </div>
+
+
+
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label36" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox37" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_PLEURITIQUE" runat="server" Text="Pleurétique" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+
+<div class="col-xs-6" style="margin-top:-50px;">
+<asp:TextBox id="TextBox15" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+ <div class="row">
+    </div>
+
+
+    <div class="box-header">
+    <h3 class="box-title">
+ <asp:Label id="LB_RALES" runat="server" Text="Râles " style="color: orange;"></asp:Label></h3>
+    </div>
+    <div class="row">
+    </div>
+ <asp:Label id="LB_PULMONAIRE5" runat="server" Text="Pulmonaires " class="col-xs-2 control-label"  ></asp:Label>
+ <label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox38" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_CREPITANTS" runat="server" Text="Crépitants " class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="col-xs-7">
+<asp:TextBox id="TB_RALES" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+    <div class="row">
+    </div>
+
+    <asp:Label id="Label24" runat="server" Text="Bronchiques " class="col-xs-1   control-label"  ></asp:Label>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox39" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_RONCHUS" runat="server" Text="Ronchus" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+    <div class="row">
+    </div>
+
+
+  <div class="col-xs-1">
+    </div>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox40" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_SIBILANTS" runat="server" Text="Sibilants" class="col-xs-3 control-label"  ></asp:Label>
+  
+
+<div class="col-xs-7">
+<asp:TextBox id="TB_RALES_BRONCHIQUES" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+<!--///////////////////////////FIN  CONTENAIRE THORAX////////////////////////////////-->
+
+
+
+
+
+
+
+<!--/////////////////////////DEBUT CONTENAIRE ABDOMAIN////////////////////////////////-->
+<div class="tab-pane" id="Abdomen">
+
+
+
+
+
+
+
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Signes fonctionnels</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+
+   
+   
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_TROUBLE_DU_TRANSIT" runat="server" Text="Troubles du transit"  style="color: orange;"></asp:Label></h3>
+</div>
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label22" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox41" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_ABSENTE2" runat="server" Text="Absente" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+    <div class="row">
+    </div>
+
+
+
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="PH" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox44" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_TYMPANISME2" runat="server" Text="Tympanisme" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="row">
+</div>
+
+  <!--THOSES LABELE ARE PLACE HOLDERS-->  
+<h3 class="box-title"><asp:Label id="PH2" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox42" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_MATITE1" runat="server" Text="Matité" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+<div class="col-xs-6" style="margin-top:-50px;">
+<asp:TextBox id="LB_MATITE_TYMPAN" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+<div class="row"></div>
+
+
+  
+
+
+   
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_NAUSEES" runat="server" Text="Nausées"  ></asp:Label></h3></div>
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label25" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox43" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div></label>
+<asp:Label id="LB_OUI" runat="server" Text="Oui" class="col-xs-2 control-label"  ></asp:Label>
+
+<div class="row"></div>
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label27" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox45" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div></label>
+<asp:Label id="LB_NON" runat="server" Text="Non" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="row"></div>
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->  
+<h3 class="box-title"><asp:Label id="Label29" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1"></label>
+<asp:Label id="Label30" runat="server" Text="" class="col-xs-2 control-label"  ></asp:Label>
+<div class="col-xs-6" style="margin-top:-50px;">
+<asp:TextBox id="TextBox9" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+  
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_VOMISSEMENTS" runat="server" Text="Vomissements"  ></asp:Label></h3></div>
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label28" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox46" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div></label>
+<asp:Label id="LB_OUI1" runat="server" Text="Oui" class="col-xs-2 control-label"  ></asp:Label>
+<div class="row"></div>
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label32" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox47" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_NON2" runat="server" Text="Non" class="col-xs-2 control-label"  ></asp:Label>
+<div class="row"></div>
+<!--THOSES LABELE ARE PLACE HOLDERS-->  
+<h3 class="box-title"><asp:Label id="Label34" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1"></label>
+<asp:Label id="Label35" runat="server" Text="" class="col-xs-2 control-label"  ></asp:Label>
+<div class="col-xs-6" style="margin-top:-50px;">
+<asp:TextBox id="TextBox13" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+    
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+
+    
+  
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_DOULEURS2" runat="server" Text="Douleurs"  ></asp:Label></h3>
+</div>
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label37" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox48" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div></label>
+<asp:Label id="LB_OUI3" runat="server" Text="Oui" class="col-xs-2 control-label"  ></asp:Label>
+<div class="row"></div>
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label39" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox49" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div></label>
+<asp:Label id="LB_NON3" runat="server" Text="Non" class="col-xs-2 control-label"  ></asp:Label>
+<div class="row"></div>
+<!--THOSES LABELE ARE PLACE HOLDERS-->  
+<h3 class="box-title"><asp:Label id="Label41" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1"></label>
+<asp:Label id="Label42" runat="server" Text="" class="col-xs-2 control-label"  ></asp:Label>
+<div class="col-xs-6" style="margin-top:-50px;">
+<asp:TextBox id="TextBox14" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Inspection</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+
+
+   
+   
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_FORM" runat="server" Text="Forme"  style="color: orange;"></asp:Label></h3>
+</div>
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label21" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox50" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_PLAT" runat="server" Text="Plat" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+    <div class="row">
+    </div>
+
+
+
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label38" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox51" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_BALLONNEMENT" runat="server" Text="Ballonnement" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="row">
+</div>
+
+  <!--THOSES LABELE ARE PLACE HOLDERS-->  
+<h3 class="box-title"><asp:Label id="Label43" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox52" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_EVENTRATION" runat="server" Text="Eventration" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+<div class="col-xs-6" style="margin-top:-50px;">
+<asp:TextBox id="LB_FORM_B_E" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+<div class="row"></div>
+
+
+  
+
+
+   
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_CICATRICES" runat="server" Text="Cicatrices"  ></asp:Label></h3></div>
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label46" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox53" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div></label>
+<asp:Label id="LB_CICATRICES_OUI" runat="server" Text="Oui" class="col-xs-2 control-label"  ></asp:Label>
+
+<div class="row"></div>
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label48" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox54" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div></label>
+<asp:Label id="LB_CICATRICES_NON" runat="server" Text="Non" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="row"></div>
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->  
+<h3 class="box-title"><asp:Label id="Label50" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1"></label>
+<asp:Label id="Label51" runat="server" Text="" class="col-xs-2 control-label"  ></asp:Label>
+<div class="col-xs-6" style="margin-top:-50px;">
+<asp:TextBox id="TextBox17" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+  
+
+
+
+
+
+   
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_OMBILIC" runat="server" Text="Ombilic"  style="color: orange;"></asp:Label></h3>
+</div>
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label31" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox55" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_OMBILIC_NORMAL" runat="server" Text="Normal" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+    <div class="row">
+    </div>
+
+
+
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label44" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox56" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_OMBILIC_DEPLISSE" runat="server" Text="Déplissé" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="row">
+</div>
+
+  <!--THOSES LABELE ARE PLACE HOLDERS-->  
+<h3 class="box-title"><asp:Label id="Label47" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox57" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_OMBILIC_HERNIE" runat="server" Text="Hernie" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+<div class="col-xs-6" style="margin-top:-50px;">
+<asp:TextBox id="LB_OMBILIC_" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+<div class="row"></div>
+
+
+
+     
+<div class="col-xs-6 box-header">
+<h3 class="box-title"><asp:Label id="LB_PERIMETRE" runat="server" Text="  Périmètre abdominal au niveau de l'ombilic    
+"  ></asp:Label></h3>
+</div>
+
+<div class="col-xs-6">
+<asp:TextBox id="TextBox16" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Palpation</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+
+
+
+
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_FOIE" runat="server" Text="Foie"></asp:Label></h3>
+</div>
+
+
+
+
+<asp:Label id="LB_FOIE_TAILLE" runat="server" Text="Taille en cm sur la ligne médio-claviculaire droite " class="col-xs-4 control-label"  ></asp:Label>
+<div class="col-xs-2">
+<asp:TextBox id="TB_FOIE_TAILLE" runat="server"  class="adresse form-control input-sm" ></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<asp:Label id="LB_DEBORD" runat="server" Text="Débord xiphoïdien" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox58" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_DEBORD_TUBAIRE" runat="server" Text="Tubaire" class="col-xs-1 control-label"  ></asp:Label>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox59" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_DEBORD_PLEURETIQUE" runat="server" Text="Pleurétique" class="col-xs-1 control-label"  ></asp:Label>
+
+    <div class="row">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<asp:Label id="LB_FACE_ANTERIEURE" runat="server" Text="Face antérieure" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox60" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_FACE_ANTERIEURE_IRREGULIERE" runat="server" Text="Irrégulière" class="col-xs-1 control-label"  ></asp:Label>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox61" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_FACE_ANTERIEURE_LISSE" runat="server" Text="Lisse" class="col-xs-1 control-label"  ></asp:Label>
+
+
+
+
+
+
+
+
+
+
+<asp:Label id="LB_BORD_INFERIEUR" runat="server" Text="Bord inférieur" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox62" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_BORD_INFERIEUR_TRANCHANT" runat="server" Text="Tranchant" class="col-xs-1 control-label"  ></asp:Label>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox63" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_BORD_INFERIEUR_MOUSSE" runat="server" Text="Mousse" class="col-xs-1 control-label"  ></asp:Label>
+
+
+    <div class="row">
+    </div>
+
+
+    <asp:Label id="LB_REFLUX_HEPATO" runat="server" Text="Reflux hépato-jugulaire" class="col-xs-4 control-label"  ></asp:Label>
+<div class="col-xs-2">
+<asp:TextBox id="TB_REFLUX_HEPATO" runat="server"  class="adresse form-control input-sm" ></asp:TextBox>
+</div>
+
+
+
+<asp:Label id="LB_SENSIBILITE" runat="server" Text="Sensibilité" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox64" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_SENSIBILITE_OUI" runat="server" Text="Oui" class="col-xs-1 control-label"  ></asp:Label>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox65" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_SENSIBILITE_NON" runat="server" Text="Non" class="col-xs-1 control-label"  ></asp:Label>
+
+    <div class="row">
+    </div>
+
+        <asp:Label id="LB_VESICULE" runat="server" Text="Vésicule" class="col-xs-4 control-label"  ></asp:Label>
+<div class="col-xs-4">
+<asp:TextBox id="TextBox18" runat="server"  class="adresse form-control input-sm" ></asp:TextBox>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Percussion</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+ 
+   
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_SONORITE_ABDOMINALE" runat="server" Text="Sonorité abdominale"  style="color: orange;"></asp:Label></h3>
+</div>
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label40" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox66" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_SONORITE_ABDOMINALE_NORMAL" runat="server" Text="Normale" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+    <div class="row">
+    </div>
+
+
+
+
+
+
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label49" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox67" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_SONORITE_MATITE_ABDOMINALE" runat="server" Text="Matité abdominale" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="row">
+</div>
+
+  <!--THOSES LABELE ARE PLACE HOLDERS-->  
+<h3 class="box-title"><asp:Label id="Label53" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox68" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_SONORITE_ABDOMINALE_TYMPANISME" runat="server" Text="Tympanisme" class="col-xs-2 control-label"  ></asp:Label>
+
+
+
+
+<div class="col-xs-6" style="margin-top:-50px;">
+<asp:TextBox id="LB_SONORITE_ABDOMINALE_" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+<div class="row"></div>
+
+
+
+
+<asp:Label id="LB_MATITE_HEPATIQUE" runat="server" Text="Matité hépatique" class="col-xs-4 control-label"  ></asp:Label>
+<div class="col-xs-2">
+<asp:TextBox id="TB_MATITE_HEPATIQUE" runat="server"  class="adresse form-control input-sm" ></asp:TextBox>
+</div>
+
+
+
+
+
+<asp:Label id="LB_MATITE_SPLENIQUE" runat="server" Text="Matité splénique" class="col-xs-4 control-label"  ></asp:Label>
+<div class="col-xs-2">
+<asp:TextBox id="TB_MATITE_SPLENIQUE" runat="server"  class="adresse form-control input-sm" ></asp:TextBox>
+</div>
+
+
+
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_REGION_SUS" runat="server" Text="Région sus-pubienne"></asp:Label></h3>
+</div>
+
+
+<asp:Label id="LB_MATITE_DU_GLOBE" runat="server" Text="Matité du globe vésical" class="col-xs-4 control-label"  ></asp:Label>
+<div class="col-xs-2">
+<asp:TextBox id="TB_MATITE_DU_GLOBE" runat="server"  class="adresse form-control input-sm" ></asp:TextBox>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+
+
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Auscultation</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+
+
+
+<div class="box-header">
+<h3 class="box-title"><asp:Label id="LB_BRUITS_HYDRO" runat="server" Text="Bruits hydro-aériques"  ></asp:Label></h3></div>
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label45" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox69" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div></label>
+<asp:Label id="LB_BRUITS_HYDRO_OUI" runat="server" Text="Oui" class="col-xs-2 control-label"  ></asp:Label>
+
+<div class="row"></div>
+
+<!--THOSES LABELE ARE PLACE HOLDERS-->
+<h3 class="box-title"><asp:Label id="Label54" runat="server" Text="" class="col-xs-3 control-label"  ></asp:Label></h3>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox70" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div></label>
+<asp:Label id="LB_BRUITS_HYDRO_NON" runat="server" Text="Non" class="col-xs-2 control-label"  ></asp:Label>
+
+    <div class="row" style="margin-top:50px;">
+    </div>
+
+
+
+
+    
+<asp:Label id="LB_SOUFFLE_SYSTOLIQUE" runat="server" Text="Souffle systolique épigastriqu" class="col-xs-5 control-label"  ></asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:-60px;"><input id="Checkbox71" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:-60px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:-60px;"></ins></div>
+</label>  
+
+<div class="col-xs-6">
+<asp:TextBox id="TB_SOUFFLE_SYSTOLIQUE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+<asp:Label id="LB_HEPATIQUE" runat="server" Text="Hépatique" class="col-xs-5 control-label"  ></asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:-60px;"><input id="Checkbox72" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:-60px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:-60px;"></ins></div>
+</label>  
+
+<div class="col-xs-6">
+<asp:TextBox id="TB_HEPATIQUE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+<asp:Label id="LB_FOSSES" runat="server" Text="Fosses lombaires " class="col-xs-5 control-label"  ></asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:-60px;"><input id="Checkbox73" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:-60px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:-60px;"></ins></div>
+</label>  
+
+<div class="col-xs-6">
+<asp:TextBox id="TB_FOSSES" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+
+
+</div>
+<!--///////////////////////////FIN  CONTENAIRE ABDOMAIN////////////////////////////////-->
+
+
+
+
+
+
+
+
+<!--/////////////////////////DEBUT CONTENAIRE PELVIEN////////////////////////////////-->
+<div class="tab-pane" id="Pelvien"> 
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class=" ui-sortable-handle">
+<p style="cursor:pointer" class="  bg-teal btn-sm" data-widget="collapse">Signes fonctionnels</p>
+<div class="box-tools pull-right">
+</div>
+</div>
+<div class="box-body border-radius-none" >
+
+
+
+  <div class="box-header ">
+                <h3 class="box-title"><strong>
+<asp:Label id="LB_FEMME" runat="server" Text="Si Femme" style="color: orange;"></asp:Label></strong></h3>
+
+  </div>
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox74" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_BRULURES_MICTIONNELLE" runat="server" Text="Brulures mictionnelles" class="col-xs-3 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox75" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_BRULURES_MICTIONNELLE_ABSENT" runat="server" Text="Absente" class="col-xs-1 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox76" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_BRULURES_MICTIONNELLE_PRESENTE" runat="server" Text="Présentes" class="col-xs-1 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="LB_BRULURES_MICTIONNELLE_PRESENTE_ABSENTE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+    <div class="row">
+
+    </div>
+
+
+
+    <label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox77" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_DYSURIE" runat="server" Text="Dysurie" class="col-xs-3 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox78" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_DYSURIE_ABSENT" runat="server" Text="Absente" class="col-xs-1 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox79" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="LB_DYSURIE_PRESENTE" runat="server" Text="Présentes" class="col-xs-1 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="LB_DYSURIE_PRESENTE_ABSENTE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+    <div class="row">
+    </div>
+
+
+
+    <label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox80" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_POLLAKIURIE" runat="server" Text="Pollakiurie" class="col-xs-3 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox81" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="LB_POLLAKIURIE_ABSNETE" runat="server" Text="Absente" class="col-xs-1 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox82" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="Label58" runat="server" Text="Présentes" class="col-xs-1 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="LB_POLLAKIURIE_PRESENTE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+    <div class="row">
+    </div>
+
+
+
+<asp:Label id="TOUCHER_PELVIEN" runat="server" Text="Toucher pelvien" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="TOUCHER_PELVIEN_" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+<asp:Label id="LB_ORIFICE_HERNIAIRES" runat="server" Text="Orifices herniaires" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="LB_ORIFICE_HERNIAIRES_" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+    <div class="row">
+    </div>
+
+
+<asp:Label id="LB_VESSIE" runat="server" Text="Vessie" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="TextBox19" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+<asp:Label id="LB_DIURESE_RESIDUELLE" runat="server" Text="Diurèse résiduelle" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="LB_DIURESE_RESIDUELLE_LB_VESSIE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+<!--SI HOMME------------------------------------------------------------------------------------>
+
+
+
+
+  <div class="box-header ">
+                <h3 class="box-title"><strong>
+<asp:Label id="LB_SI_HOMME" runat="server" Text="Si Homme" style="color: orange;"></asp:Label></strong></h3>
+
+  </div>
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox83" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="SI_HOMME_BRULURES_MICTIONNELLES" runat="server" Text="Brulures mictionnelles" class="col-xs-3 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox84" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="SI_HOMME_BRULURES_MICTIONNELLES_ABSENTE" runat="server" Text="Absente" class="col-xs-1 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox85" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="SI_HOMME_BRULURES_MICTIONNELLES_PRESENTE" runat="server" Text="Présentes" class="col-xs-1 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="TextBox20" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+    <div class="row">
+
+    </div>
+
+
+
+    <label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox86" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="SI_HOMME_DYSURIE" runat="server" Text="Dysurie" class="col-xs-3 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox87" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="SI_HOMME_DYSURIE_ABSENTE" runat="server" Text="Absente" class="col-xs-1 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox88" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="SI_HOMME_DYSURIE_PRESENTE" runat="server" Text="Présentes" class="col-xs-1 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="SI_HOMME_DYSURIE_PRESENTE_ABSENTE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+    <div class="row">
+    </div>
+
+
+
+    <label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox89" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="SI_HOMME_POLLAKIURIE" runat="server" Text="Pollakiurie" class="col-xs-3 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox90" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>
+<asp:Label id="SI_HOMME_POLLAKIURIE_ABSENTE" runat="server" Text="Absente" class="col-xs-1 control-label"  ></asp:Label>
+
+
+
+
+
+
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;left:40px;"><input id="Checkbox91" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;left:40px;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);left:40px;"></ins></div>
+</label>  
+<asp:Label id="SI_HOMME_POLLAKIURIE_PRESENTE" runat="server" Text="Présentes" class="col-xs-1 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="SI_HOMME_POLLAKIURIE_ABSENTE_PRESENTE" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+    <div class="row">
+    </div>
+
+
+    
+  <div class="box-header ">
+                <h3 class="box-title"><strong>
+<asp:Label id="LB_TOUCHER_RECTAL" runat="server" Text="Toucher rectal" style="color: orange;"></asp:Label></strong></h3>
+
+  </div>
+    
+<asp:Label id="LB_POSTATE" runat="server" Text="Prostate" class="col-xs-1 control-label"  ></asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox92" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+<div class="col-xs-4">
+<asp:TextBox id="LB_TOUCHER_RECTAL_POSTATE_" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+<asp:Label id="LB_EPIDIDYME" runat="server" Text="Epididyme" class="col-xs-1 control-label"  ></asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox93" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+<div class="col-xs-4">
+<asp:TextBox id="TextBox21" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+    
+ 
+    
+<asp:Label id="LB_RECTUM" runat="server" Text="Rectum" class="col-xs-1 control-label"  ></asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox94" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+<div class="col-xs-4">
+<asp:TextBox id="LB_RECTUM_" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+<asp:Label id="LB_CORDON" runat="server" Text="Cordon" class="col-xs-1 control-label"  ></asp:Label>
+<label class="col-xs-1">
+<div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input id="Checkbox95" type="checkbox" class="flat-red" checked="" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div>
+</label>  
+
+<div class="col-xs-4">
+<asp:TextBox id="LB_CORDON_" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+
+    <div class="row"> 
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<asp:Label id="SI_HOMME_TRIANGULAIRE" runat="server" Text="Triangulaire à sommet supérieur" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="SI_HOMME_TRIANGULAIRE_" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+<asp:Label id="SI_HOMME_ORIFICES_HERNIAIRES" runat="server" Text="Orifices herniaires" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="SI_HOMME_ORIFICES" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+    <div class="row">
+    </div>
+
+
+<asp:Label id="SI_HOMME_VESSIE" runat="server" Text="Vessie" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="SI_HOMME_VESSIE_" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+<asp:Label id="SI_HOMME_DIURES" runat="server" Text="Diurèse résiduelle" class="col-xs-2 control-label"  ></asp:Label>
+
+
+<div class="col-xs-4">
+<asp:TextBox id="SI_HOMME_DIURES_" runat="server"  class="adresse form-control input-sm"  TextMode="MultiLine"></asp:TextBox>
+</div>
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+<!--///////////////////////////FIN  CONTENAIRE PELVIEN////////////////////////////////-->
+
+
+  
+                   
+<!--/////////////////////////DEBUT CONTENAIRE VASCULAIRE////////////////////////////////-->
+<div class="tab-pane" id="Vasculaire">
+  <center> <asp:Label id="Label56" runat="server" Text="VASCULAIRE"   ></asp:Label>
+    </center>
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class="col-xs-12">
+<asp:TextBox id="TextBox25" runat="server"  class="adresse form-control input-sm" rows="20" TextMode="MultiLine"></asp:TextBox>
+</div>
+
+<div class="box-body  bg-teal  border-radius-none" >
+
+
+
+
+
+</div>
+</div>
+</div>
+<!--///////////////////////////FIN  CONTENAIRE VASCULAIRE////////////////////////////////-->
+
+
+
+
+
+
+
+
+ <!--/////////////////////////DEBUT CONTENAIRE NEUROLOGIQUE////////////////////////////////-->
+<div class="tab-pane" id="Neurologique">
+  <center> <asp:Label id="Label55" runat="server" Text="NEUROLOGIQUE"   ></asp:Label>
+    </center>
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class="col-xs-12">
+<asp:TextBox id="TextBox24" runat="server"  class="adresse form-control input-sm" rows="20" TextMode="MultiLine"></asp:TextBox>
+</div>
+
+<div class="box-body  bg-teal  border-radius-none" >
+
+
+
+
+
+</div>
+</div>
+</div>
+<!--///////////////////////////FIN  CONTENAIRE NEUROLOGIQUE////////////////////////////////-->
+
+
+
+      
+
+
+<!--/////////////////////////DEBUT CONTENAIRE OSTEO-ARTICULAIRE////////////////////////////////-->
+<div class="tab-pane" id="Osteo-articulaire">
+  <center> <asp:Label id="Label52" runat="server" Text="OSTEO-ARTICULAIRE"   ></asp:Label>
+    </center>
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+<div class="col-xs-12">
+<asp:TextBox id="TextBox23" runat="server"  class="adresse form-control input-sm" rows="20" TextMode="MultiLine"></asp:TextBox>
+</div>
+
+<div class="box-body  bg-teal  border-radius-none" >
+
+
+
+
+
+</div>
+</div>
+</div>
+<!--///////////////////////////FIN  CONTENAIRE  OSTEO-ARTICULAIRE////////////////////////////////-->
+
+
+
+
+
+<!--/////////////////////////DEBUT CONTENAIRE CONCLUSION////////////////////////////////-->
+<div class="tab-pane" id="Conclusion">
+  <center> <asp:Label id="Label15" runat="server" Text="CONCLUSION"   ></asp:Label>
+    </center>
+<div class="box box-solid   collapsed-box"  style="position: relative;background-color: rgba(14, 79, 93, 0.85);
+box-shadow: 0 0 8px rgba(0,0,0,0.5);">
+  
+<div class="col-xs-12">
+<asp:TextBox id="TextBox22" runat="server"  class="adresse form-control input-sm" rows="20" TextMode="MultiLine"></asp:TextBox>
+</div>
+
+<div class="box-body  bg-teal  border-radius-none" >
+
+
+
+
+
+</div>
+</div>
+</div>
+<!--///////////////////////////FIN  CONTENAIRE CONCLUSION////////////////////////////////-->
+
+           
+
+
+   <center>
+    
+<div>
+<!-- VALIDATION_RESULTATS -->
+<asp:Button id="LB_BTN_CONCULTATION" runat="server" Text="Valider"  class="btn btn-primary  " />
+</div>
+
+</center>   
+
+
+
+</div>    
+ </div>
+
+             <!-- required for floating -->
+          <!-- Nav tabs -->
+           <div class="col-xs-1">
+          <ul class="nav nav-tabs tabs-right sideways">
+            <li><a href="#Pelvien" data-toggle="tab">Pelvien</a></li>
+            <li><a href="#Vasculaire" data-toggle="tab">Vasculaire</a></li>
+            <li><a href="#Neurologique" data-toggle="tab">Neurologique</a></li>
+            <li><a href="#Osteo-articulaire" data-toggle="tab">Osteo-articulaire</a></li>
+            <li><a href="#Conclusion" data-toggle="tab">Conclusion</a></li>
+
+          </ul>
+           </div>
+       
+
+ 
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+          </div>
+     
+</div>
+      
+
+ 
+      
+    
+
+
+
+
+
+
+</asp:Content>
+
+
+
+
+
+               
+  <script src="Ressources/js/classie.js" type="text/javascript"></script>
+<script type="text/javascript">
+        
+        $(function () {
+
+
+
+
+            $("#extruderRight").buildMbExtruder({
+                position: "right",
+                width: 300,
+                extruderOpacity: .8,
+                textOrientation: "tb",
+                onExtOpen: function () { },
+                onExtContentLoad: function () { },
+                onExtClose: function () { }
+            });
+
+
+            $("#extruderRightBottom").buildMbExtruder({
+                position: "right",
+                width: 300,
+                extruderOpacity: .8,
+                textOrientation: "tb",
+                onExtOpen: function () { },
+                onExtContentLoad: function () { },
+                onExtClose: function () { }
+            });
+
+
+            $.fn.changeLabel = function (text) {
+                $(this).find(".flapLabel").html(text);
+                $(this).find(".flapLabel").mbFlipText();
+            };
+
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+        $(function () {
+
+
+
+            $("#extruderLeft").buildMbExtruder({
+                position: "left",
+                width: 300,
+                extruderOpacity: .8,
+                hidePanelsOnClose: true,
+                accordionPanels: true,
+                onExtOpen: function () { },
+                onExtContentLoad: function () { },
+                onExtClose: function () { }
+            });
+
+
+            /*
+            $("#extruderLeft").buildMbExtruder({
+            position:"left",
+            width:300,
+            extruderOpacity:.8,
+            hidePanelsOnClose:false,
+            accordionPanels:false,
+            onExtOpen:function(){},
+            onExtContentLoad:function(){$("#extruderLeft").openPanel();},
+            onExtClose:function(){}
+            });
+            */
+
+            $("#extruderLeft1").buildMbExtruder({
+                position: "left",
+                width: 300,
+                extruderOpacity: .8,
+                onExtOpen: function () { },
+                onExtContentLoad: function () { },
+                onExtClose: function () { }
+            });
+
+            $("#extruderLeft2").buildMbExtruder({
+                position: "top",
+                width: 300,
+                positionFixed: false,
+                top: 0,
+                extruderOpacity: .8,
+                onExtOpen: function () { },
+                onExtContentLoad: function () { },
+                onExtClose: function () { }
+            });
+        });
+
+</script>
+
+
+<script>
+                         
+                             $(function () {
+
+
+                                 $.containerize.addMethod("showdata", function () {
+                                     var el = this;
+                                     var txt = "container2 properties:<br><br>";
+                                     var data = el.$.data();
+                                     for (var i in data) {
+                                         txt += i + "= " + data[i] + " (" + typeof data[i] + ")<br>";
+                                     }
+                                     txt += "<hr><br>"
+                                     el.content.prepend(txt);
+                                     return txt;
+                                 });
+
+
+
+                                 /*
+                                 * Example of how to add a new button for the button bar:
+                                 *
+                                 * */
+
+                                 var newBtns = {
+                                     changecontent: {
+                                         idx: "changecontent",
+                                         label: "&#xe044;",
+                                         className: "",
+                                         action: function (container2, btn) { $(container).containerize("changecontent", "test_content.html", { id: 01, temp: 'simple' }) }
+                                     }
+                                 };
+                                 $.extend($.containerize.defaultButtons, newBtns);
+
+                                 /***********************************************/
+
+                                 $(".container2").containerize({
+                                     onLoad: function (el) { },
+                                     onResize: function (el) {
+                                         console.debug("top: " + el.style.top, "left: " + el.style.left, "width: " + el.style.width, "height: " + el.style.height);
+                                     }
+                                 });
+
+                                 $(".container2").on("resized", function () {
+                                     console.debug("top: " + this.style.top, "left: " + this.style.left, "width: " + this.style.width, "height: " + this.style.height);
+                                 });
+
+                                 /*
+                                 * Example of custom Buttons for the toolbar
+                                 *
+                                 * */
+
+                                 var changeSkinBtn = {
+                                     idx: "changeSkinBtn",
+                                     label: "",
+                                     className: "",
+                                     action: function (container, btn) {
+                                         if (!$(container2).hasClass('black'))
+                                             $(container2).containerize('skin', 'black', container2.$.data("skin"));
+                                         else
+                                             $(container2).containerize('skin');
+                                     }
+                                 };
+
+                                 var iconizeBtn = {
+                                     idx: "iconizeBtn",
+                                     label: "iconize",
+                                     className: "",
+                                     action: function (container2, btn) {
+                                         $(container2).containerize("iconize");
+                                     }
+                                 };
+
+                                 var dockBtn = {
+                                     idx: "dockBtn",
+                                     label: "Épingler à la barre des tâches",
+                                     className: "",
+                                     action: function (container2, btn) {
+                                         $(container2).containerize("iconize", "dock");
+                                     }
+                                 };
+
+                                 var closeBtn = {
+                                     idx: "closeBtn",
+                                     label: "close",
+                                     className: "",
+                                     action: function (container2, btn) {
+                                         $(container2).containerize("close");
+                                     }
+                                 };
+
+                                 $("#cont1").containerize("addtotoolbar", [closeBtn]);
+                                 $("#cont2").containerize("addtotoolbar", changeSkinBtn);
+                                 $("#cont3").containerize("addtotoolbar", [, dockBtn]);
+                                 $("#cont4").containerize("addtotoolbar", [, dockBtn]);
+                                 $("#cont5").containerize("addtotoolbar", [, dockBtn]);
+                                 /*
+                                 $("#cont1").containerize("responsive");
+                                 $("#cont2").containerize("responsive");
+                                 $("#cont3").containerize("responsive");
+                                 */
+
+                             })
+
+</script> 
+                                    
+
+
+
+                           
+
+
+
+
+
+
+  
+
+<style type="text/css">  
+    
+                            
+img	{ width: 100%; }
+img.backeuro {
+position: fixed;
+top: 0px;
+height:100%;
+left: 0px;
+width: 100%;
+    
+z-index: -999;
+}
+                            
+                            
+                            
+</style>
+</div>
+       <img class="backeuro" src="Ressources/images/bluebackground5.jpg" />                            
+                         
+</body>
+ 
+</html>
